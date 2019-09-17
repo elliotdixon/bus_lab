@@ -15,17 +15,17 @@ class BusTest < MiniTest::Test
   end
 
   def test_add_passenger()
-    @bus.add_passenger(@person)
+    @bus.add_passenger(@person1)
     assert_equal(1, @bus.total_passengers)
   end
 
   def test_remove_passenger()
-    @bus.remove_passenger(@person)
+    @bus.remove_passenger(@person1)
     assert_equal(0, @bus.total_passengers)
   end
 
   def test_remove_all_passengers()
-    @bus.add_passenger(@person)
+    @bus.add_passenger(@person1)
     @bus.remove_passengers(@passengers)
     assert_equal(0, @bus.total_passengers)
   end
