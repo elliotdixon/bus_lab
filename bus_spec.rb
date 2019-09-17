@@ -7,6 +7,7 @@ class BusTest < MiniTest::Test
 
   def setup()
     @bus = Bus.new(22, "Ocean Terminal", "Brum")
+
   end
 
   def test_number_of_passengers()
@@ -23,6 +24,11 @@ class BusTest < MiniTest::Test
     assert_equal(0, @bus.total_passengers)
   end
 
+  def test_remove_all_passengers()
+    @bus.add_passenger(@person)
+    @bus.remove_passengers(@passengers)
+    assert_equal(0, @bus.total_passengers)
+  end
 
 
 end

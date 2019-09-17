@@ -9,4 +9,4 @@ class PassengerTest < MinitTest::Test
     @person = person.new("Brian", 30)
   end
 
-  def test
+  
